@@ -12,26 +12,29 @@
     <form>
         <label for="Username">Username:</label>
         <input type="text" id="username" name="username">
-        <p class="error">Username is required</p>
+        <p id="usernameError"></p>
         <br><br>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email">
-        <p class="error">Please enter a valid email address</p>
+        <p id="emailError"></p>
         <br><br>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password">
-        <p class="error">Password must be at least 6 characters long</p>
+        <p id="passwordError"></p>
         <br><br>
 
         <input type="checkbox" id="terms" name="terms">
         <label for="terms">I agree to the terms and conditions</label>
-        <p class="error">You must agree to the terms and conditions</p>
+        <p id="termsError"></p>
         <br><br>
 
-        <input type="submit" value="Sign Up">
+        <button type="submit" value="Sign Up" id="sign-up">Sign Up</button>
+
     </form>
+
+    
     
     <script src="script.js"></script>
 </body>
