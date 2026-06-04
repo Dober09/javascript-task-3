@@ -4,6 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #1e2a3a;
+    line-height: 1.5;
+    padding: 2rem 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+h1, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #0f3b5c;
+}
+
+h1 {
+    font-size: 2rem;
+    border-left: 5px solid #2c7da0;
+    padding-left: 1rem;
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 2px dashed #cbd5e1;
+}
+
+/* Form Styling */
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+label {
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    transition: 0.2s ease;
+    margin-top: 0.2rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2c7da0;
+    box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.2);
+}
+
+/* Error message styling */
+[id$="Error"] {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    min-height: 1.5rem;
+}
+
+/* Checkbox group */
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.1);
+    vertical-align: middle;
+}
+
+/* Submit button */
+#sign-up {
+    background-color: #2c7da0;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    margin-top: 0.5rem;
+}
+
+#sign-up:hover {
+    background-color: #1f5e7a;
+    transform: scale(0.98);
+}
+
+
+
+
+/* Spacing helpers */
+br {
+    display: none;
+}
+
+/* Better spacing for form groups */
+form > div, form > p, form > input, form > label {
+    margin-bottom: 0.25rem;
+}
+    </style>
 </head>
 <body>
 
@@ -34,8 +150,19 @@
 
     </form>
 
+    <hr>
+
+    <h3>Verification</h3>
+    <button id="resendBtn" disabled>Resend Verification (10s)</button>
+
+    <div id="output-section">
+        <h3>Execution Logs</h3>
+        <div id="logConsole"></div>
+    </div>
+
+
     
-    
-    <script src="script.js"></script>
+    <script src="validation.js"></script>
+    <script src="async.js"></script>
 </body>
 </html>
